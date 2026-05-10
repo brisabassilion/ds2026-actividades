@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -32,6 +33,15 @@
         </div>
     </nav>
 
+    <div class="buscador">
+      <input type="text" id="busqueda" placeholder="Buscar libro..." class="form-control">
+      <button id="btnBuscar" class="btn btn-primary">Buscar</button>
+    </div>
+
+    <div id="mensaje"></div>
+    <div id="resultados"></div>
+
+    <script type="module" src="./js/data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
