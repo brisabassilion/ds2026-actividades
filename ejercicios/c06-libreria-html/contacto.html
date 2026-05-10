@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -31,6 +32,45 @@
             </div>
         </div>
     </nav>
+    
+  <section class="contacto-section">
+    <div class="container">
+
+        <div class="contacto-card">
+          <h1 class="text-center mb-4">Contacto</h1>
+          <p class="text-center text-muted mb-4">
+          ¿Tenés alguna consulta? Escribinos.
+          </p>
+
+           <form>
+              <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Asunto</label>
+                <select class="form-select" required>
+                  <option value="">Seleccionar</option>
+                  <option>Consulta</option>
+                  <option>Reclamo</option>
+                  <option>Sugerencia</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+              Enviar
+              </button>
+            </form>
+        </div>
+    </div>
+  </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
