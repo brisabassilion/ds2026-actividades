@@ -11,9 +11,9 @@ function Home() {
         <Container className="container">
           <h2>Libros Destacados</h2>
           <Row className="g-4">
-            {libros.map((libro, index) => (
-              <Col key={index} xs={12} sm={6} md={4}>
-                <LibroCard title={libro.title} author={libro.author} img={libro.img} />
+            {libros.map((libro) => (
+              <Col key={libro.id} xs={12} sm={6} md={4}>
+                <LibroCard id={libro.id} title={libro.title} author={libro.author} img={libro.img} />
               </Col>
             ))}
          </Row>

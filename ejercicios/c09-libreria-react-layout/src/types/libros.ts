@@ -1,33 +1,51 @@
-export default [
+export default[
   {
+    id: 1,
     title: "Cien años de soledad",
     author: "Gabriel García Márquez",
-    img: "https://covers.openlibrary.org/b/id/8231856-L.jpg"
+    img: "https://covers.openlibrary.org/b/id/8231856-L.jpg",
+    descripcion: "Novela emblemática de Gabriel García Márquez que relata la historia de la familia Buendía en Macondo, combinando realismo mágico y acontecimientos extraordinarios para reflexionar sobre el destino, la memoria y la soledad.",
+    precio: "$15.000",
   },
   {
+    id: 2,
     title: "1984",
     author: "George Orwell",
-    img: "https://covers.openlibrary.org/b/id/7222246-L.jpg"
+    img: "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    descripcion: "Novela distópica de George Orwell que retrata un mundo totalitario donde la libertad es un lujo inalcanzable.",
+    precio: "$12.000",
   },
   {
+    id: 3,
     title: "El Principito",
     author: "Antoine de Saint-Exupéry",
-    img: "https://covers.openlibrary.org/b/id/8101341-L.jpg"
+    img: "https://covers.openlibrary.org/b/id/8101341-L.jpg",
+    descripcion: "Novela infantil de Antoine de Saint-Exupéry que narra la historia de un pequeño príncipe que visita diferentes planetas.",
+    precio: "$10.000",
   },
   {
+    id:4,
     title: "Rayuela",
     author: "Julio Cortázar",
-    img: "https://covers.openlibrary.org/b/id/8226191-L.jpg"
+    img: "https://covers.openlibrary.org/b/id/8226191-L.jpg",
+    descripcion: "Novela experimental de Julio Cortázar que desafía las convenciones narrativas.",
+    precio: "$14.000",
   },
   {
+    id: 5,
     title: "Don Quijote",
     author: "Miguel de Cervantes",
-    img: "https://covers.openlibrary.org/b/isbn/9780060934347-L.jpg"
+    img: "https://covers.openlibrary.org/b/isbn/9780060934347-L.jpg",
+    descripcion: "Novela clásica de Miguel de Cervantes que relata la historia de un hidalgo que se obsesiona con los caballeros andantes.",
+    precio: "$16.000",
   },
   {
+    id: 6,
     title: "Orgullo y prejuicio",
     author: "Jane Austen",
-    img: "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
+    img: "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg",
+    descripcion: "Novela romántica de Jane Austen que trata sobre el amor, el matrimonio y la sociedad en la Inglaterra del siglo XIX.",
+    precio: "$13.000",
   }
 
 ];
