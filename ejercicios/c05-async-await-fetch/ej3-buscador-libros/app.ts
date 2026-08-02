@@ -15,7 +15,6 @@ boton.addEventListener("click", buscarLibros);
 
 async function buscarLibros(): Promise<void> {
     const texto = input.value.trim();
-    const cargando = document.getElementById("cargando");
 
     resultados.innerHTML = "";
     mensaje.textContent = "";
