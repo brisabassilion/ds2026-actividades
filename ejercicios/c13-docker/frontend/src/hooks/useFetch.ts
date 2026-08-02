@@ -1,0 +1,28 @@
+import { useState, useEffect } from "react";
+import type { Libro } from "../types/libros";
+
+export function useFetchLibro(url: string) {
+  const [data, setData] = useState<Libro[] | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("Error al cargar datos");
+        const json: Libro[] = await res.json();
+        setData(json);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [url]);
+
+  return { data, loading, error };
+}
