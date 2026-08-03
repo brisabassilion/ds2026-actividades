@@ -1,0 +1,44 @@
+import express from "express";
+
+const app = express();
+const PORT = 3000;
+
+app.get("/", (_req, res) => {
+  res.json({ mensaje: "Funciona!" });
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+});
+
+interface Libro {
+  id: number;
+  titulo: string;
+  autor: string;
+  precio: number;
+  imagen: string;
+  disponible: boolean;
+}
+
+const libros: Libro[] = [
+  { id: 1, titulo: "El principito", autor: "Antoine de Saint-Exupéry",
+    precio: 4500, imagen: "https://...", disponible: false },
+  { id: 2, titulo: "100 años de soledad", autor: "Gabriel García Márquez",
+    precio: 6000, imagen: "https://...", disponible: true },
+  { id: 3, titulo: "Cien años de soledad", autor: "Gabriel García Márquez",
+    precio: 6000, imagen: "https://...", disponible: false },
+  { id: 4, titulo: "El túnel", autor: "Ernesto Sabato",
+    precio: 5000, imagen: "https://...", disponible: true },
+];
+
+app.get("/libros", (req, res) => {
+  const { disponible } = req.query;
+  if (disponible == undefined) {
+    res.json(libros);
+    return;
+  } else if (disponible || disponible === "false") {
+    res.json(libros.filter(libro => libro.disponible === (disponible === "true")));
+  } else {
+    res.json(libros);
+  }
+});
